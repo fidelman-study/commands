@@ -1,0 +1,72 @@
+git init - создать репозиторий
+
+git config --global user.name "Name" - Добавить пользователя
+
+git config --global user.email fi93@mail.ru - Добавить Email пользователю
+
+git config --list - посмотреть конфигурацию
+
+git status - текущий статус проекта
+
+sudo touch .gitignore - создание файла игнорирования
+
+sudo nano -w .gitignore - редактирование
+
+F3 - сохранить F2 - выйти
+
+defaults write com.apple.finder AppleShowAllFiles -bool true
+killall Finder - показать скрытые файлы
+
+defaults write com.apple.finder AppleShowAllFiles -bool false
+killall Finder - скрыть скрытые файлы
+
+git status --untracked-files=all - показать все не наблюдаемые файл файлы
+
+git add . - начать слежение за всеми файлами
+
+git add index.html - начать слежение за файлом (индексирование)
+
+git rm --cached <file> - убрать слежение от файла
+
+git commit -a -m"init" - все файлы, которые были изменены или добавлены, поместить в коммит - -a - все файлы, -m - сообщение (если не писать сообщение выйдет редактор, в верхней строке коммит, далее ESC -> :x)
+
+git config --global core.editor "'<path file>' -multiInst -notabbar -nosession -noPlugin"
+
+".php" - файлы по формату
+
+git checkout -- <file> - откатить файл до предыдущего коммита
+
+git log - история коммитов (если список очень длинный -> [q] - выйти)
+
+git log --pretty=format:"%h - %an, %ar : %s" - история коммитов в другом формате
+%h - короткий код коммита
+%an - автор
+%ar - относительное время
+&s - комментарий
+
+git log --science=2.weeks - последние 2 недели
+
+git log -p -2 - логи по коду -2 - количество коммитов
+
+git help <comman> - помощь по команде
+
+git branch <name> - создание новой ветки
+
+git checkout -b <name> - создание новой ветки и переход
+
+git branch - показать все ветки
+
+git checkout <name> - переход на ветку
+
+git config --global merge.tool kdiff3 - установка утилиты для разрешения конфликтов (сначала нужно установить)
+
+git merge <икфтср> - заливание из ветки
+
+git mergetool - запуск утилиты для разрегения конфликтов
+
+git remote -v - просмотреть удаленные репозитории
+
+git pull --rebase
+git push - отправить изменения
+
+git config --global push.default mathing/simle - протолкнуть все/текущая ветка
